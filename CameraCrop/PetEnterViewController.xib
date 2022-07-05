@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PetEnterViewController" customModule="PetMarvel_IOS" customModuleProvider="target">
+            <connections>
+                <outlet property="cameraButton" destination="UyF-Cj-QLX" id="B2B-cn-pgd"/>
+                <outlet property="cameraMaskView" destination="nSV-Ew-H0t" id="3yi-tD-qZX"/>
+                <outlet property="cameraView" destination="zPS-OJ-uGL" id="cxV-vE-SMZ"/>
+                <outlet property="hintLabel" destination="hgb-jJ-Qjp" id="mmr-xQ-LOy"/>
+                <outlet property="photosButton" destination="dgP-Jd-KK2" id="Eef-qc-vmm"/>
+                <outlet property="titleLabel" destination="buS-NZ-xD9" id="6XW-Sw-1NG"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Eo7-bb-024"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vw-Jr-WEO">
+                    <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkP-Ca-KXa">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="AeG-zU-7li"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="back"/>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="bx0-ik-9OA"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宠物面部识别建档" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buS-NZ-xD9">
+                            <rect key="frame" x="129.66666666666666" y="12.333333333333334" width="130.99999999999997" height="19.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="bkP-Ca-KXa" firstAttribute="top" secondItem="8vw-Jr-WEO" secondAttribute="top" id="1ZT-oF-CgQ"/>
+                        <constraint firstItem="bkP-Ca-KXa" firstAttribute="leading" secondItem="8vw-Jr-WEO" secondAttribute="leading" id="4CR-85-8ed"/>
+                        <constraint firstItem="buS-NZ-xD9" firstAttribute="centerY" secondItem="8vw-Jr-WEO" secondAttribute="centerY" id="Gar-4D-JEB"/>
+                        <constraint firstAttribute="height" constant="44" id="Gu9-fW-d62"/>
+                        <constraint firstItem="buS-NZ-xD9" firstAttribute="centerX" secondItem="8vw-Jr-WEO" secondAttribute="centerX" id="Tj9-TQ-6dR"/>
+                        <constraint firstAttribute="bottom" secondItem="bkP-Ca-KXa" secondAttribute="bottom" id="dzL-75-wFB"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPS-OJ-uGL" customClass="CameraView" customModule="PetMarvel_IOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSV-Ew-H0t" customClass="CameraMaskView" customModule="PetMarvel_IOS" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请让宠物脸尽可能在线框中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgb-jJ-Qjp">
+                    <rect key="frame" x="91" y="169" width="208" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="GlF-PA-wvL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="catcombine" translatesAutoresizingMaskIntoConstraints="NO" id="9cw-XZ-amI">
+                    <rect key="frame" x="111" y="359" width="168" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="22Q-aN-KVN"/>
+                        <constraint firstAttribute="width" constant="168" id="WNJ-rP-qEr"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UyF-Cj-QLX">
+                    <rect key="frame" x="97" y="628.66666666666663" width="196" height="41"/>
+                    <color key="backgroundColor" red="0.36862745099999999" green="0.79215686269999996" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="cvP-Hb-wbI"/>
+                        <constraint firstAttribute="width" constant="196" id="rtA-VQ-84l"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="拍照"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="cameraCut:" destination="-1" eventType="touchUpInside" id="HlW-0d-V2R"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgP-Jd-KK2">
+                    <rect key="frame" x="97" y="679.66666666666663" width="196" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="196" id="JGB-uL-wSr"/>
+                        <constraint firstAttribute="height" constant="41" id="Uw1-Ju-2ur"/>
+                    </constraints>
+                    <color key="tintColor" red="0.36862745099999999" green="0.79215686269999996" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="从相册选择"/>
+                    <connections>
+                        <action selector="goPhotoLibary:" destination="-1" eventType="touchUpInside" id="98e-PP-YM0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="9cw-XZ-amI" firstAttribute="centerX" secondItem="nSV-Ew-H0t" secondAttribute="centerX" id="1RN-Iu-gLm"/>
+                <constraint firstItem="dgP-Jd-KK2" firstAttribute="top" secondItem="UyF-Cj-QLX" secondAttribute="bottom" constant="10" id="2Tb-Q9-1CQ"/>
+                <constraint firstItem="dgP-Jd-KK2" firstAttribute="centerX" secondItem="nSV-Ew-H0t" secondAttribute="centerX" id="2qb-rj-Cfh"/>
+                <constraint firstAttribute="trailing" secondItem="8vw-Jr-WEO" secondAttribute="trailing" id="7Kk-2a-p0G"/>
+                <constraint firstItem="nSV-Ew-H0t" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9cK-7Y-oJR"/>
+                <constraint firstItem="9cw-XZ-amI" firstAttribute="centerY" secondItem="nSV-Ew-H0t" secondAttribute="centerY" id="BOs-G6-GoZ"/>
+                <constraint firstItem="hgb-jJ-Qjp" firstAttribute="top" secondItem="8vw-Jr-WEO" secondAttribute="bottom" constant="81" id="Igl-no-f95"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="nSV-Ew-H0t" secondAttribute="bottom" id="Ihx-9j-VI7"/>
+                <constraint firstItem="nSV-Ew-H0t" firstAttribute="top" secondItem="8vw-Jr-WEO" secondAttribute="bottom" id="NMP-97-dQ5"/>
+                <constraint firstItem="UyF-Cj-QLX" firstAttribute="centerX" secondItem="nSV-Ew-H0t" secondAttribute="centerX" id="Ouf-mo-o8M"/>
+                <constraint firstItem="8vw-Jr-WEO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="QNc-w5-bYW"/>
+                <constraint firstItem="UyF-Cj-QLX" firstAttribute="centerY" secondItem="nSV-Ew-H0t" secondAttribute="centerY" constant="200" id="VyJ-K9-es0"/>
+                <constraint firstItem="zPS-OJ-uGL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aqU-hG-Omk"/>
+                <constraint firstItem="zPS-OJ-uGL" firstAttribute="bottom" secondItem="nSV-Ew-H0t" secondAttribute="bottom" id="dJE-EV-s06"/>
+                <constraint firstItem="hgb-jJ-Qjp" firstAttribute="centerX" secondItem="8vw-Jr-WEO" secondAttribute="centerX" id="hal-vQ-kdz"/>
+                <constraint firstItem="8vw-Jr-WEO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="pKr-00-NOi"/>
+                <constraint firstItem="zPS-OJ-uGL" firstAttribute="top" secondItem="nSV-Ew-H0t" secondAttribute="top" id="scy-l8-nAu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zPS-OJ-uGL" secondAttribute="trailing" id="tzx-Mc-s3b"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nSV-Ew-H0t" secondAttribute="trailing" id="ylO-mP-aJo"/>
+            </constraints>
+            <point key="canvasLocation" x="138.46153846153845" y="89.5734597156398"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="10" height="18"/>
+        <image name="catcombine" width="174" height="190"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
